@@ -1,6 +1,6 @@
 const args = process.argv.slice(2);
 args.forEach(function(time) {
-  if (time < 0 || typeof time !== "number"){
+  if (time < 0 || isNaN(time)) {
     return;
   }
   setTimeout(() => {
